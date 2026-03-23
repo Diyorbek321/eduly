@@ -1,9 +1,22 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Loader2, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Support() {
   const { t } = useLanguage();
   const tSupport = t('support');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    setTimeout(() => setIsSuccess(false), 3000);
+  };
 
   return (
     <section id="support" className="py-24 bg-white border-y border-[var(--color-border-light)]">
@@ -29,8 +42,7 @@ export default function Support() {
               </div>
               <div>
                 <h4 className="font-bold text-[var(--color-heading)] mb-1">{tSupport.phone}</h4>
-                <p className="text-[var(--color-body)]">+1 (555) 123-4567</p>
-                <p className="text-[var(--color-body)]">+1 (555) 987-6543</p>
+                <p className="text-[var(--color-body)]">+998 93 191 33 08</p>
               </div>
             </div>
 
@@ -40,8 +52,7 @@ export default function Support() {
               </div>
               <div>
                 <h4 className="font-bold text-[var(--color-heading)] mb-1">{tSupport.email}</h4>
-                <p className="text-[var(--color-body)]">support@eduly.com</p>
-                <p className="text-[var(--color-body)]">sales@eduly.com</p>
+                <p className="text-[var(--color-body)]">dturgunboyev635@gmail.com</p>
               </div>
             </div>
 
@@ -51,15 +62,14 @@ export default function Support() {
               </div>
               <div>
                 <h4 className="font-bold text-[var(--color-heading)] mb-1">{tSupport.address}</h4>
-                <p className="text-[var(--color-body)]">123 Education Street</p>
-                <p className="text-[var(--color-body)]">Tech District, NY 10001</p>
+                <p className="text-[var(--color-body)]">Tashkent, Angren</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 border border-[var(--color-border-light)] shadow-sm">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-[var(--color-heading)] mb-2">{tSupport.form.name}</label>
                 <input 
@@ -86,9 +96,22 @@ export default function Support() {
               </div>
               <button 
                 type="submit"
-                className="w-full bg-[var(--color-primary)] hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold transition-colors shadow-md shadow-blue-500/20"
+                disabled={isSubmitting || isSuccess}
+                className="w-full bg-[var(--color-primary)] hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold transition-colors shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {tSupport.form.submit}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    {tSupport.form.sending}
+                  </>
+                ) : isSuccess ? (
+                  <>
+                    <CheckCircle2 className="w-5 h-5" />
+                    {tSupport.form.success}
+                  </>
+                ) : (
+                  tSupport.form.submit
+                )}
               </button>
             </form>
           </div>

@@ -8,7 +8,7 @@ export default function Pricing() {
   const plans = [
     {
       name: tPricing.plans[0].name,
-      price: "$100",
+      price: "$200",
       period: tPricing.period,
       who: tPricing.plans[0].who,
       color: "blue",
@@ -21,7 +21,7 @@ export default function Pricing() {
     },
     {
       name: tPricing.plans[1].name,
-      price: "$150",
+      price: "$250",
       period: tPricing.period,
       who: tPricing.plans[1].who,
       color: "primary",
@@ -36,7 +36,7 @@ export default function Pricing() {
     },
     {
       name: tPricing.plans[2].name,
-      price: "$179",
+      price: "$300",
       period: tPricing.period,
       who: tPricing.plans[2].who,
       color: "yellow",

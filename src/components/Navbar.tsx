@@ -85,7 +85,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2 text-[var(--color-heading)] font-medium">
               <Phone className="w-4 h-4 text-[var(--color-primary)]" />
-              <span>+1 (555) 123-4567</span>
+              <span>+998 93 191 33 08</span>
             </div>
             <button className="bg-[var(--color-primary)] hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium transition-colors shadow-sm">
               {tNav.bookDemo}
@@ -128,7 +128,7 @@ export default function Navbar() {
           <div className="flex flex-col gap-3 mt-2">
             <div className="flex items-center gap-2 text-[var(--color-heading)] font-medium py-2">
               <Phone className="w-4 h-4 text-[var(--color-primary)]" />
-              <span>+1 (555) 123-4567</span>
+              <span>+998 93 191 33 08</span>
             </div>
             <button className="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-medium w-full text-center">
               {tNav.bookDemo}

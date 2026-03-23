@@ -66,7 +66,7 @@ export const translations = {
     },
     support: { tag: "Support", title: "We're here to help", subtitle: "Have questions? Our team is ready to assist you.",
       contact: "Contact Us", phone: "Phone", email: "Email", address: "Address",
-      form: { name: "Your Name", email: "Email Address", message: "How can we help?", submit: "Send Message" }
+      form: { name: "Your Name", email: "Email Address", message: "How can we help?", submit: "Send Message", sending: "Sending...", success: "Sent Successfully!" }
     },
     cta: { title: "Ready to take your education center to the next level?", subtitle: "Join 2,000+ education centers already using Eduly. Start your 7-day free trial today.", btn1: "Try for free — 7 days!", btn2: "Talk to sales" },
     footer: { desc: "Premium CRM for Education Centers. Systematize processes, automate tasks, and grow your student base.", product: "Product", company: "Company", support: "Support", rights: "All rights reserved.",
@@ -144,7 +144,7 @@ export const translations = {
     },
     support: { tag: "Qo'llab-quvvatlash", title: "Biz yordam berishga tayyormiz", subtitle: "Savollaringiz bormi? Jamoamiz sizga yordam berishga tayyor.",
       contact: "Biz bilan bog'laning", phone: "Telefon", email: "Elektron pochta", address: "Manzil",
-      form: { name: "Ismingiz", email: "Elektron pochta", message: "Qanday yordam bera olamiz?", submit: "Xabar yuborish" }
+      form: { name: "Ismingiz", email: "Elektron pochta", message: "Qanday yordam bera olamiz?", submit: "Xabar yuborish", sending: "Yuborilmoqda...", success: "Muvaffaqiyatli yuborildi!" }
     },
     cta: { title: "O'quv markazingizni yangi bosqichga olib chiqishga tayyormisiz?", subtitle: "Eduly'dan foydalanayotgan 2000+ o'quv markazlariga qo'shiling. 7 kunlik bepul sinov muddatini bugun boshlang.", btn1: "7 kun bepul sinab ko'ring!", btn2: "Sotuv bo'limi bilan bog'lanish" },
     footer: { desc: "O'quv markazlari uchun premium CRM. Jarayonlarni tizimlashtiring, vazifalarni avtomatlashtiring va o'quvchilar bazasini o'stiring.", product: "Mahsulot", company: "Kompaniya", support: "Qo'llab-quvvatlash", rights: "Barcha huquqlar himoyalangan.",
@@ -222,7 +222,7 @@ export const translations = {
     },
     support: { tag: "Поддержка", title: "Мы здесь, чтобы помочь", subtitle: "Есть вопросы? Наша команда готова вам помочь.",
       contact: "Свяжитесь с нами", phone: "Телефон", email: "Электронная почта", address: "Адрес",
-      form: { name: "Ваше имя", email: "Электронная почта", message: "Чем мы можем помочь?", submit: "Отправить сообщение" }
+      form: { name: "Ваше имя", email: "Электронная почта", message: "Чем мы можем помочь?", submit: "Отправить сообщение", sending: "Отправка...", success: "Успешно отправлено!" }
     },
     cta: { title: "Готовы вывести свой учебный центр на новый уровень?", subtitle: "Присоединяйтесь к 2000+ учебным центрам, уже использующим Eduly. Начните 7-дневную бесплатную пробную версию сегодня.", btn1: "Попробовать бесплатно 7 дней!", btn2: "Связаться с отделом продаж" },
     footer: { desc: "Премиум CRM для учебных центров. Систематизируйте процессы, автоматизируйте задачи и увеличивайте базу студентов.", product: "Продукт", company: "Компания", support: "Поддержка", rights: "Все права защищены.",
